@@ -1,6 +1,9 @@
 body{
   margin:10px;
 }
+h1 {
+  color:orangered;
+}
 
 input{
   margin:10px;
