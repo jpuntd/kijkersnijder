@@ -1,10 +1,12 @@
 {
-  "name": "indekijker_afb",
+  "homepage": "https://snwclone.github.io/kijkersnijder",
+  "name": "kijkersnijder",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-image-crop": "^7.0.2",
     "react-scripts": "3.0.0"
   },
   "scripts": {
