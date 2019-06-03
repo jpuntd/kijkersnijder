@@ -99,18 +99,18 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <div id="cropped-image">
-          {this.state.croppedImageUrl?
-            <img crossOrigin="Anonymous" src={this.state.croppedImageUrl} alt="cropped" />:
-            <input type="file" onChange={this.onSelectFile} />}
-          {this.state.croppedImageUrl && <a href={this.state.croppedImageUrl} download><button>Download</button></a>}
-        </div>
         <ReactCrop className="crop-editor" src={this.state.src}
           crop={this.state.crop}
           onImageLoaded={this.onImageLoaded}
           onComplete={this.onCropComplete}
           onChange={this.onCropChange}
         />
+        <div id="cropped-image">
+          {this.state.croppedImageUrl?
+            <img crossOrigin="Anonymous" src={this.state.croppedImageUrl} alt="cropped" />:
+            <input type="file" onChange={this.onSelectFile} />}
+          {this.state.croppedImageUrl && <a href={this.state.croppedImageUrl} download><button>Download</button></a>}
+        </div>
       </div>
     );
   }
