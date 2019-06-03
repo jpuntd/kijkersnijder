@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/kijkersnijder/static/css/main.84390835.chunk.css",
-    "main.js": "/kijkersnijder/static/js/main.3147ee99.chunk.js",
-    "main.js.map": "/kijkersnijder/static/js/main.3147ee99.chunk.js.map",
+    "main.css": "/kijkersnijder/static/css/main.1994632b.chunk.css",
+    "main.js": "/kijkersnijder/static/js/main.575a783e.chunk.js",
+    "main.js.map": "/kijkersnijder/static/js/main.575a783e.chunk.js.map",
     "runtime~main.js": "/kijkersnijder/static/js/runtime~main.c133200a.js",
     "runtime~main.js.map": "/kijkersnijder/static/js/runtime~main.c133200a.js.map",
     "static/css/2.1d5443d6.chunk.css": "/kijkersnijder/static/css/2.1d5443d6.chunk.css",
     "static/js/2.69eb3b9b.chunk.js": "/kijkersnijder/static/js/2.69eb3b9b.chunk.js",
     "static/js/2.69eb3b9b.chunk.js.map": "/kijkersnijder/static/js/2.69eb3b9b.chunk.js.map",
     "index.html": "/kijkersnijder/index.html",
-    "precache-manifest.80aadbb0e288d2e76891f873cc59a108.js": "/kijkersnijder/precache-manifest.80aadbb0e288d2e76891f873cc59a108.js",
+    "precache-manifest.8dad4267fbfed8644f6b8362953cf7eb.js": "/kijkersnijder/precache-manifest.8dad4267fbfed8644f6b8362953cf7eb.js",
     "service-worker.js": "/kijkersnijder/service-worker.js",
     "static/css/2.1d5443d6.chunk.css.map": "/kijkersnijder/static/css/2.1d5443d6.chunk.css.map",
-    "static/css/main.84390835.chunk.css.map": "/kijkersnijder/static/css/main.84390835.chunk.css.map"
+    "static/css/main.1994632b.chunk.css.map": "/kijkersnijder/static/css/main.1994632b.chunk.css.map"
   }
 }

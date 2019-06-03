@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dd3b716eb9dc03a8e54a2b28f4642f45",
+    "revision": "70c47134234f9124f9e1d0cc82371a74",
     "url": "/kijkersnijder/index.html"
   },
   {
@@ -8,16 +8,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/kijkersnijder/static/css/2.1d5443d6.chunk.css"
   },
   {
-    "revision": "5eee8cb4ac30decb91fa",
-    "url": "/kijkersnijder/static/css/main.84390835.chunk.css"
+    "revision": "7c238fe9b87cd0c0756d",
+    "url": "/kijkersnijder/static/css/main.1994632b.chunk.css"
   },
   {
     "revision": "6437c821bae851a9fddf",
     "url": "/kijkersnijder/static/js/2.69eb3b9b.chunk.js"
   },
   {
-    "revision": "5eee8cb4ac30decb91fa",
-    "url": "/kijkersnijder/static/js/main.3147ee99.chunk.js"
+    "revision": "7c238fe9b87cd0c0756d",
+    "url": "/kijkersnijder/static/js/main.575a783e.chunk.js"
   },
   {
     "revision": "c3754b8f1c0b9c1653c0",
