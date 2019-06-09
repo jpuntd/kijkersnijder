@@ -14,14 +14,10 @@ margin-top: 10px;
 }
 
 #cropped-image{
-  height:187px;
-  width:360px;
   margin:10px;
-  border:1px dotted grey;
-  padding:1px;
   float:right;
 }
-#cropped-image img{
-  max-height:187px;
-  max-width:360px;
+
+#cropped-image img {
+  display: none;
 }

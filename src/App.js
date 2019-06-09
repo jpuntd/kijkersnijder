@@ -9,12 +9,14 @@ class App extends React.Component {
   constructor(props) {
     super(props);
 
+    //aspect 360/187
+
     this.state = {
       src: null,
       crop: {
         x: 10,
         y: 10,
-        aspect: 360 / 187,
+        width: 360,
       },
       croppedImageUrl: ''
     };
@@ -23,6 +25,7 @@ class App extends React.Component {
     this.onCropChange = this.onCropChange.bind(this);
     this.makeClientCrop = this.makeClientCrop.bind(this);
     this.getCroppedImg = this.getCroppedImg.bind(this);
+    this.renderSelectionAddon = this.renderSelectionAddon.bind(this);
 
   }
 
@@ -59,7 +62,7 @@ class App extends React.Component {
 
   onImageLoaded = (image) => {
     this.imageRef = image;
-    console.log(image.height + '/' + image.width)
+    //console.log(image.height + '/' + image.width)
     this.makeClientCrop(this.state.crop);
     this.setState({ crop: { x: 80, y: 80, width: 80 } })
   }
@@ -86,7 +89,7 @@ class App extends React.Component {
 
     return new Promise((resolve) => {
       canvas.toBlob((blob) => {
-        blob.name = fileName; // eslint-disable-line no-param-reassign
+        blob.name = fileName; 
         window.URL.revokeObjectURL(this.fileUrl);
         this.fileUrl = window.URL.createObjectURL(blob);
         resolve(this.fileUrl);
@@ -94,23 +97,54 @@ class App extends React.Component {
     });
   }
 
+  renderSelectionAddon() {
+    const ratio = 360/187;
+    let inner = {
+      top: 0,
+      left: 0,
+      width: Math.min(this.state.crop.height * ratio, this.state.crop.width),
+      height: Math.min(this.state.crop.width / ratio, this.state.crop.height),
+    };
+    if (this.state.crop.width < this.state.crop.height * ratio) {    
+      inner.top = Math.max(0, (this.state.crop.height - inner.height) / 2);
+    } else {
+      inner.left = Math.max(0, (this.state.crop.width - inner.width) / 2);
+
+    }
+    return (
+    <div
+      style={{
+        position: 'absolute',
+        ...inner,
+        opacity:0.2,
+        backgroundColor:"yellow"
+      }}
+    >h
+    </div>
+  );
+}
+
 
 
   render() {
     return (
       <div className="App">
-        <ReactCrop className="crop-editor" src={this.state.src}
-          crop={this.state.crop}
-          onImageLoaded={this.onImageLoaded}
-          onComplete={this.onCropComplete}
-          onChange={this.onCropChange}
-        />
         <div id="cropped-image">
           {this.state.croppedImageUrl?
             <img crossOrigin="Anonymous" src={this.state.croppedImageUrl} alt="cropped" />:
             <input type="file" onChange={this.onSelectFile} />}
           {this.state.croppedImageUrl && <a href={this.state.croppedImageUrl} download><button>Download</button></a>}
         </div>
+        <ReactCrop className="crop-editor" src={this.state.src}
+          crop={this.state.crop}
+          minWidth={360}
+          x={20}
+          width={360}
+          onImageLoaded={this.onImageLoaded}
+          onComplete={this.onCropComplete}
+          onChange={this.onCropChange}
+          renderSelectionAddon={this.renderSelectionAddon}
+        />
       </div>
     );
   }
